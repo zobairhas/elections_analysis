@@ -15,20 +15,18 @@ The analysis of the election shows that:
 - The candidates were:
   - Charles Casper Stockham
   - Diana DeGette
-  - Raymon Anthony Doane  
--The candidate results were:
-  - Charles Casper Stockham received 23.0% of the total votes or 85,213 votes.
-  - Diana DeGette received 73.8% of the total votes or 272,892 votes.
-  - Raymon Anthony Doane received 3.1% of the total votes or 11,606 votes.
+  - Raymon Anthony Doane
+- The candidate results were:
+  - Charles Casper Stockham received 23.0% of the total vote or 85,213 votes.
+  - Diana DeGette received 73.8% of the total vote or 272,892 votes.
+  - Raymon Anthony Doane received 3.1% of the total vote or 11,606 votes.
 - The winner of the election:
   - Diana DeGette won by a large margin.
 
-<br>
-
-- The counties that in the election were:
-  -   Jefferson
-  -   Denver
-  -   Arapahoe
+- The counties in the election were:
+  - Jefferson
+  - Denver
+  - Arapahoe
 - The county results were:
   - Jefferson county delivered 10.5% of the total vote or 38,855 votes. 
   - Denver county delivered 82.8% of the total vote or 306,055 votes.
@@ -66,8 +64,8 @@ Winning Percentage: 73.8%
 ## Election Audit Summary
 The sheet is dynamic and can be used for almost any election if specific changes are made to the script. 
 - Assuming the next election file will be provided in a CSV format, then the first section that will need to change is the file path.
-  - The [file_to_load] variable will need to change to load the new CSV file. 
-  - The [file_to_save] variable should change so that a new text file is created for every new data set.   
+  - The ```file_to_load``` variable will need to change to load the new CSV file. 
+  - The ```file_to_save``` variable should change so that a new text file is created for every new data set.   
 
 ```
 # Add a variable to load a file from a path.
@@ -76,7 +74,7 @@ file_to_load = os.path.join("Resources", "election_results.csv")
 file_to_save = os.path.join("analysis", "election_analysis.txt")
 ```
 
--Next, in the [for] loop, a different election file might have new rows and columns that might not match up to the index below.
+- Next, in the ```for``` loop, a different election file might have new rows and columns that might not match up to the index below.
 
 ```
         # Get the candidate name from each row.
@@ -86,7 +84,7 @@ file_to_save = os.path.join("analysis", "election_analysis.txt")
         county_name = row[1]
 ```
 
-- Lastly, the f strings may need to be updated depending on how the new set of election data is formatted.
+- Lastly, the ```f strings``` may need to be updated depending on how the new set of election data is formatted.
 - For example, in the future, county votes might not matter, and we need to know what the total votes are at the state level. 
 
 ```
